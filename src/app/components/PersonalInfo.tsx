@@ -5,6 +5,7 @@ import Image from "next/image";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faLinkedin } from "@fortawesome/free-brands-svg-icons";
 
+
 const PersonalInfoComponent = async () => {
   const { personalInfos } = await hygraphClient.request<{
     personalInfos: PersonalInfo[];
@@ -20,8 +21,8 @@ const PersonalInfoComponent = async () => {
           height="200"
           className="w-[200px] h-[200px] rounded-full"
         />
-        <div className="flex flex-col gap-3 items-center justify-center">
-          <div className="text-4xl w-full text-center" >{personalInfos[0].name}</div>
+        <div className="flex flex-col gap-6 items-center justify-center ">
+          <div className="text-3xl w-full text-center font-header-2" >{personalInfos[0].name}</div>
           <div className="text-lg w-full text-center">{personalInfos[0].desc}</div>
           <a href={personalInfos[0].linkedin} >
           <FontAwesomeIcon icon={faLinkedin} className="w-[30px] h-[30px] hover:text-amber-500 hover:cursor-pointer"/> </a>

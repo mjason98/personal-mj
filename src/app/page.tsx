@@ -1,7 +1,6 @@
 import React from 'react';
-import Link from 'next/link';
 import PersonalInfoComponent from './components/PersonalInfo';
-// <Link href="/projects/1">Go to Project 1</Link>
+import NewPage from './components/NewPage';
 
 const HomePage = async () => {
   
@@ -9,10 +8,12 @@ const HomePage = async () => {
     <div className='flex flex-row gap-10 items-center justify-between  max-w-[90%] max-h-[90%] text-white'>
     <div className='flex flex-col gap-8 p-5 bg-[#3c414a] rounded-xl min-w-[200px] '>
       <PersonalInfoComponent />
-      <div>Home Page 2</div>
+      <NewPage pageName='projects' color='rose'/>
+      <NewPage pageName='articles' color='blue'/>
+      <NewPage pageName='games' color='amber'/>
     </div>
     <div className='flex flex-col  p-5 bg-[#3c414a] rounded-xl'>
-      <div>Recents</div>
+      <div>Relevant Posts</div>
       <div>a</div>
       <div>b</div>
     </div>
