@@ -2,6 +2,8 @@ import { hygraphClient } from "../lib/client";
 import { GET_LAST_PERSONAL_INFO } from "../lib/queries";
 import { PersonalInfo } from "../lib/types";
 import Image from "next/image";
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faLinkedin } from "@fortawesome/free-brands-svg-icons";
 
 const PersonalInfoComponent = async () => {
   const { personalInfos } = await hygraphClient.request<{
@@ -21,7 +23,8 @@ const PersonalInfoComponent = async () => {
         <div className="flex flex-col gap-3 items-center justify-center">
           <div className="text-4xl w-full text-center" >{personalInfos[0].name}</div>
           <div className="text-lg w-full text-center">{personalInfos[0].desc}</div>
-          <a href={personalInfos[0].linkedin} >lk</a>
+          <a href={personalInfos[0].linkedin} >
+          <FontAwesomeIcon icon={faLinkedin} className="w-[30px] h-[30px] hover:text-amber-500 hover:cursor-pointer"/> </a>
         </div>
       </div>
     );
