@@ -10,6 +10,7 @@ export type PersonalInfo = {
     name: string;
     desc: string;
     linkedin: string;
+    x: string;
     faceFoto: Foto
 }
 

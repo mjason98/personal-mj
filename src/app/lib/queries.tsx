@@ -2,7 +2,7 @@ import { gql } from 'graphql-request';
 
 export const GET_LAST_PERSONAL_INFO = gql`
 query Program {
-  personalInfos(last: 1) {
+  personalInfos(first: 1, orderBy: publishedAt_DESC) {
     id
     name
     linkedin
@@ -70,7 +70,7 @@ query Project ($id: ID!) {
 
 export const GET_RECIENT_POSTS = gql`
 query Recient {
-  personalPosts(last: 2) {
+  personalPosts(first: 2, orderBy: publishedAt_DESC) {
     id
     title
     image {
