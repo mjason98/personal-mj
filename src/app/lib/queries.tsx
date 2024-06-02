@@ -29,3 +29,28 @@ query Projects {
   }
 }
 `;
+
+export const GET_SINGLE_PROJECT = gql`
+query Project ($id: ID!) {
+  personalProject(where: {id: $id}) {
+    id
+    name
+    desc
+    url
+    thumbnail {
+      id
+      url
+      width
+      height
+    }
+    personalPosts {
+      id
+      image {
+        url
+      }
+      text
+      title
+    }
+  }
+}
+`;
