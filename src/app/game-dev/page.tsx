@@ -13,8 +13,6 @@ const GameDevPage = async () => {
     tag: "gamedev",
   });
 
-  console.log(personalPosts);
-
   return (
     <div className="flex flex-col gap-10 items-center justify-between  max-w-[90%] max-h-[90%] text-white">
       <div className="flex flex-col gap-12 items-center p-10 bg-[#3c414a] rounded-xl min-w-[200px]">
