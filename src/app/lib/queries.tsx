@@ -54,3 +54,15 @@ query Project ($id: ID!) {
   }
 }
 `;
+
+export const GET_RECIENT_POSTS = gql`
+query Recient {
+  personalPosts(last: 2) {
+    id
+    title
+    image {
+      url
+    }
+  }
+}
+`;
