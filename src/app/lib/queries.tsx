@@ -79,3 +79,18 @@ query Recient {
   }
 }
 `;
+
+export const GET_GAMEDEV_POSTS = gql`
+query DevPosts($tag: String!) {
+  personalPosts(where: {tag: $tag}) {
+    id
+    image {
+      url
+      width
+      height
+    }
+    text
+    title
+  }
+}
+`;

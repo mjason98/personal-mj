@@ -21,7 +21,7 @@ const HomePage = async () => {
         <PersonalInfoComponent />
         <NewPage pageName="projects"/>
         <NewPage pageName="articles"/>
-        <NewPage pageName="games" />
+        <NewPage pageName="game-dev" />
       </div>
       <div className="flex flex-col gap-6">
         <div className="flex flex-row p-5 gap-5 items-center justify-between bg-[#3c414a] rounded-xl">
