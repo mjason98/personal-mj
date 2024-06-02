@@ -10,6 +10,6 @@ First, run the development server:
 npm run dev
 ```
 
-## Vercel Deploiment
+## Vercel Deployment
 
 Check the deploied app in [Vercel](https://mjason.vercel.app/)
