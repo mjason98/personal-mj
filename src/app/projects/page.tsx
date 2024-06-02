@@ -12,7 +12,6 @@ const ProjectsPage = async () => {
   const { personalProjects } = await hygraphClient.request<{
     personalProjects: PersonalProject[];
   }>(GET_PROJECTS);
-  console.log(personalProjects);
 
   return (
     <div className="flex flex-col gap-10 items-center justify-between  max-w-[90%] max-h-[90%] text-white">

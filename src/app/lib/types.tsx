@@ -28,3 +28,10 @@ export type PersonalProject = {
     personalPosts?: Post[];
     url: string;
 }
+
+export type Article = {
+    id: string;
+    title: string;
+    url: string;
+    keywords: string;
+}

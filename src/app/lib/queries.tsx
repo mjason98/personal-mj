@@ -30,6 +30,19 @@ query Projects {
 }
 `;
 
+
+export const GET_ARTICLES = gql`
+query Articles {
+  personalArticles {
+    id
+    title
+    url
+    keywords
+  }
+}
+
+`;
+
 export const GET_SINGLE_PROJECT = gql`
 query Project ($id: ID!) {
   personalProject(where: {id: $id}) {
